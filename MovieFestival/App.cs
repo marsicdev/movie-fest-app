@@ -6,8 +6,9 @@ class App
     {
 
         string genre = new Genre("Drama").GetData();
+        string movieOutput = new Movie("The Shawshank Redemption", new Genre("Drama"), 142).GetData();
 
-        Console.WriteLine("Hi!" + genre);
+        Console.WriteLine(movieOutput);
     }
 }
 
