@@ -4,7 +4,7 @@ class App
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hi from App!");
+        Console.WriteLine("Hi from App");
     }
 }
 
