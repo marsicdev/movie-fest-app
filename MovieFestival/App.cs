@@ -7,20 +7,25 @@ class App
         Console.WriteLine("Hi from App");
     }
 
-    public string CreateProgram()
+    public Program CreateProgram()
     {
         string date = ReadUserInput("Insert program date");
+        Program program = new Program
+        {
+            Date = DateTime.Parse(date)
+        };
 
-        return "new Program(date);";
+        return program;
     }
 
-    public string CreateMovie()
+    public Movie CreateMovie()
     {
         string title = ReadUserInput("Insert movie title");
         string length = ReadUserInput("Insert movie length");
-        string genre = ReadUserInput("Insert movie genre");
+        string genreStr = ReadUserInput("Insert movie genre");
+        Genre genre = new Genre(genreStr);
 
-        return "new Movie(title, length, genre);";
+        return new Movie(title, int.Parse(length), genre);
     }
 
     private string ReadUserInput(string message)
