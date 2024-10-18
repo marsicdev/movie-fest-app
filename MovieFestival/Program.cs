@@ -31,8 +31,8 @@ namespace MovieFestival
                 totalDuration += mov.Length;
                 details = details + "\n" + mov.GetData();
             }
-            return "Total duration of the Program: " + totalDuration + "\n"
-                + "Program details: "+ details;
+            return "Date: " + Date + " Total duration of the Program: " + totalDuration 
+                + " Movies: " +Movies.Count + " Program details: "+ details;
         }
     }
 }
